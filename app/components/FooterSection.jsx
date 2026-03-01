@@ -1,10 +1,17 @@
 import Image from "next/image";
 
 const FooterSection = () => {
-  return (
-    // <div className="bg-[#202430] w-[1440px] h-[497px]">
+
+    const socials = [
+        { id: 1, href: "https://facebook.com", icon: "/facebook.png", alt: "Facebook" },
+        { id: 2, href: "https://facebook.com", icon: "/Dribbble.png", alt: "Dribbble" },
+        { id: 3, href: "https://twitter.com", icon: "/twitter.png", alt: "Twitter" },
+        { id: 4, href: "https://instagram.com", icon: "/instagram.png", alt: "Instagram" },
+        { id: 5, href: "https://linkedin.com", icon: "/linkedin.png", alt: "LinkedIn" },
+      ];
     
-    // </div>
+  return (
+    
 
     <footer className="footer bg-[#202430] sm:footer-horizontal  text-base-content p-10">
   <nav>
@@ -44,7 +51,40 @@ const FooterSection = () => {
       </div>
     </fieldset>
   </form>
+
+  <hr />
+
+  <div>
+     
+     <p>2021 @ QuickHire. All rights reserved.</p>
+     <nav>
+    <h6 className="footer-title">Social</h6>
+    <div className="grid grid-flow-col gap-4">
+        
+    {socials.map((social) => (
+    <a
+      key={social.id}
+      href={social.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-400 hover:bg-gray-500 transition"
+    >
+      <Image
+        src={social.icon}
+        alt={social.alt}
+        width={18}
+        height={18}
+      />
+    </a>
+  ))}
+
+    </div>
+  </nav>
+  </div>
+
 </footer>
+
+
     
   );
 };
