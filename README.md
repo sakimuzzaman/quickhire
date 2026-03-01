@@ -34,3 +34,54 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+🚀 Features
+User Features
+
+✔ Browse job listings
+✔ Search and filter jobs
+✔ View job details
+✔ Apply for jobs
+✔ Responsive UI
+
+Admin Features
+
+✔ Create job listings
+✔ Manage job postings
+✔ Delete job listings
+✔ View applications
+
+Technologies Used
+Frontend
+
+1.Next.js
+
+2.Tailwind CSS
+
+3.React
+
+4.Daisy Ui 
+
+📂 Project Structure
+QuickHire/
+│
+├── app/                # Next.js app directory
+├── components/         # Reusable UI components
+├── public/             # Static assets
+├── styles/             # Global styles
+└── README.md            # Documentation
+
+⚙️ Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/quickhire.git
+cd quickhire
+
+2️⃣ Install Dependencies
+npm install
+3️⃣ Run the Project
+npm run dev
+
+The project will run at:
+
+http://localhost:3000
