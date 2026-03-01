@@ -1,215 +1,131 @@
 import Image from "next/image";
 
+const jobs = [
+  {
+    id: 1,
+    img: "/ljobs1.png",
+    title: "Social Media Assistant",
+    company: "Nomad Paris, France",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 2,
+    img: "/Cicon10.png",
+    title: "Brand Designer",
+    company: "Dropbox, San Fransisco, USA",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 3,
+    img: "/ljobs2.png",
+    title: "Interactive Developer",
+    company: "Terraform, Hamburg, Germany",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 4,
+    img: "/ljobs3.png",
+    title: "HR Manager",
+    company: "Packer, Lucern, Switzerland",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 5,
+    img: "/ljobs4.png",
+    title: "Social Media Assistant",
+    company: "Netlify, Paris, France",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 6,
+    img: "/ljobs5.png",
+    title: "Brand Designer",
+    company: "Maze, San Fransisco, USA",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 7,
+    img: "/ljobs6.png",
+    title: "Interactive Developer",
+    company: "Packer, Lucern, Switzerland",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+  {
+    id: 8,
+    img: "/ljobs7.png",
+    title: "HR Manager",
+    company: "Webflow, Lucern, Switzerland",
+    tags: ["Full Time", "Marketing", "Design"],
+  },
+];
+
 const LatestJobsOpen = () => {
   return (
-    <>
-      <div className="max-w-[1440px] mx-auto px-[124px] bg-[#F8F8FD]">
-        {/* Header Row */}
-        <div className="flex py-12 justify-between items-center">
-          <p className="font-semibold text-5xl">
-            Latest <span className="text-[#26A4FF]">jobs open</span>
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 bg-[#F8F8FD]">
+      
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 py-12">
+        <h2 className="font-semibold text-3xl sm:text-4xl lg:text-5xl">
+          Latest <span className="text-[#26A4FF]">jobs open</span>
+        </h2>
+
+        <div className="flex items-center gap-3 cursor-pointer">
+          <p className="text-[#4640DE] font-semibold text-sm sm:text-base">
+            Show all jobs
           </p>
-
-          <div className="flex items-center gap-4 cursor-pointer">
-            <p className="text-[#4640DE] font-semibold">Show all jobs</p>
-            <Image
-              src="/arrowIcon.png"
-              width={24}
-              height={24}
-              alt="arrowIcon"
-            />
-          </div>
-        </div>
-
-        <div className="flex gap-8">
-          {/* Left Column */}
-          <div className="w-[580px] h-[644px]  flex flex-col gap-4">
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs1.png" width={48} height={57} alt="ljobs1" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">Social Media Assistant</p>
-                <span className="text-[#515B6F]">Nomad Paris, France</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/Cicon10.png" width={48} height={57} alt="Cicon10" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">Brand Designer</p>
-                <span className="text-[#515B6F]">Dropbox, San Fransisco, USA</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs2.png" width={48} height={57} alt="ljobs2" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">Interactive Developer</p>
-                <span className="text-[#515B6F]">Terraform, Hamburg, Germany</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs3.png" width={48} height={57} alt="ljobs3" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">HR Manager</p>
-                <span className="text-[#515B6F]">Packer, Lucern, Switzerland</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column */}
-          <div className="w-[580px] h-[644px] flex flex-col gap-4">
-
-          <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs4.png" width={48} height={57} alt="ljobs4" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">Social Media Assistant</p>
-                <span className="text-[#515B6F]">Netlify, Paris, France</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs5.png" width={48} height={57} alt="ljobs5" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">Brand Designer</p>
-                <span className="text-[#515B6F]">Maze, San Fransisco, USA</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs6.png" width={48} height={57} alt="ljobs6" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">Interactive Developer</p>
-                <span className="text-[#515B6F]">Packer, Lucern, Switzerland</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-8 w-[580px] h-[149px] bg-white py-[24px] px-[40px]">
-              <div className="">
-                <Image src="/ljobs7.png" width={48} height={57} alt="ljobs7" />
-              </div>
-              <div>
-                <p className="font-semibold text-xl">HR Manager</p>
-                <span className="text-[#515B6F]">Webflow, Lucern, Switzerland</span>
-
-                <div className="flex gap-4 py-2 ">
-                  <span className="inline-flex items-center px-3 py-1 bg-[#56CDAD1A] rounded-3xl text-[#56CDAD] font-semibold">
-                    Full Time
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1  border border-[#FFB836] rounded-3xl text-[#FFB836] font-semibold">
-                    Marketing
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 border border-[#4640DE]  rounded-3xl text-[#4640DE] font-semibold">
-                    Design
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <Image
+            src="/arrowIcon.png"
+            width={20}
+            height={20}
+            alt="arrowIcon"
+          />
         </div>
       </div>
-    </>
+
+      {/* Jobs Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-16">
+        {jobs.map((job) => (
+          <div
+            key={job.id}
+            className="flex gap-4 bg-white p-6 rounded-xl hover:shadow-md transition"
+          >
+            <Image
+              src={job.img}
+              width={48}
+              height={48}
+              alt={job.title}
+            />
+
+            <div className="flex-1">
+              <h3 className="font-semibold text-lg sm:text-xl">
+                {job.title}
+              </h3>
+              <p className="text-[#515B6F] text-sm sm:text-base">
+                {job.company}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-3 pt-3">
+                {job.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className={`px-3 py-1 rounded-full text-xs sm:text-sm font-semibold ${
+                      tag === "Full Time"
+                        ? "bg-[#56CDAD1A] text-[#56CDAD]"
+                        : tag === "Marketing"
+                        ? "border border-[#FFB836] text-[#FFB836]"
+                        : "border border-[#4640DE] text-[#4640DE]"
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
