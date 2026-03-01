@@ -1,309 +1,139 @@
 import Image from "next/image";
 
+const jobs = [
+  {
+    title: "Email Marketing",
+    company: "Revolt",
+    location: "Madrid, Spain",
+    desc: "Revolut is looking for Email Marketing to help team",
+    icon: "/Cicon9.jpg",
+    tags: ["Marketing", "Design"],
+  },
+  {
+    title: "Brand Designer",
+    company: "Dropbox",
+    location: "San Francisco",
+    desc: "Dropbox is looking for Designer to help the team",
+    icon: "/Cicon10.png",
+    tags: ["Marketing", "Business"],
+  },
+  {
+    title: "Email Marketing",
+    company: "Pitch",
+    location: "Berlin, Germany",
+    desc: "Pitch is looking for Manager to join marketing",
+    icon: "/Cicon11.png",
+    tags: ["Marketing"],
+  },
+  {
+    title: "Visual Designer",
+    company: "Blinklist",
+    location: "Granada, Spain",
+    desc: "Blinkist is looking for Designer to help team",
+    icon: "/Cicon12.png",
+    tags: ["Design"],
+  },
+  {
+    title: "Product Designer",
+    company: "Revolt",
+    location: "Madrid, Spain",
+    desc: "Revolut is looking for Product Designer",
+    icon: "/Cicon13.png",
+    tags: ["Marketing", "Design"],
+  },
+  {
+    title: "Lead Designer",
+    company: "Dropbox",
+    location: "San Francisco",
+    desc: "Dropbox is looking for Lead Designer",
+    icon: "/Cicon14.png",
+    tags: ["Marketing", "Business"],
+  },
+  {
+    title: "Brand Strategist",
+    company: "Pitch",
+    location: "Berlin, Germany",
+    desc: "Pitch is looking for Brand Strategist",
+    icon: "/Cicon15.png",
+    tags: ["Marketing"],
+  },
+  {
+    title: "Data Analyst",
+    company: "Blinklist",
+    location: "Granada, Spain",
+    desc: "Blinkist is looking for Data Analyst",
+    icon: "/Cicon16.png",
+    tags: ["Design"],
+  },
+];
+
 const FeaturedJobs = () => {
   return (
-    <>
-      <div className="w-full bg-white py-[72px]">
-        {/* Main Container */}
-        <div className="max-w-[1440px] mx-auto px-[124px]">
-          {/* Header Row */}
-          <div className="flex justify-between items-center">
-            <p className="font-semibold text-5xl">
-              Featured <span className="text-[#26A4FF]">jobs</span>
+    <div className="w-full bg-white py-16">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+          <p className="font-semibold text-3xl md:text-4xl lg:text-5xl">
+            Featured <span className="text-[#26A4FF]">jobs</span>
+          </p>
+
+          <div className="flex items-center gap-3 cursor-pointer">
+            <p className="text-[#4640DE] font-semibold text-sm md:text-base">
+              Show all jobs
             </p>
-
-            <div className="flex items-center gap-4 cursor-pointer">
-              <p className="text-[#4640DE] font-semibold">Show all jobs</p>
-              <Image
-                src="/arrowIcon.png"
-                width={24}
-                height={24}
-                alt="arrowIcon"
-              />
-            </div>
-          </div>
-
-          {/* Cards Section first row */}
-          <div className="mt-[48px] flex gap-8">
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon9.jpg" width={48} height={48} alt="Cicon9" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-                 Email Marketing
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Revolt</p>
-               <span className="text-[#515B6F]">Madrid, Spain</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Revolut is looking for Email <br /> Marketing to help team ma 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 <span className="bg-[#EB85331A] p-2 rounded-3xl">
-                    <p className="text-[#EB8533] font-semibold">Marketing</p>
-                 </span>
-                 <span className="bg-[#56CDAD1A] p-2 rounded-3xl">
-                    <p className="text-[#56CDAD] font-semibold">Design</p>
-                 </span>
-              </div>
-            </div>
-            {/* //22 */}
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon10.png" width={48} height={48} alt="Cicon10" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-                 Brand Designer
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Dropbox</p>
-               <span className="text-[#515B6F]">San, Fransisco</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Dropbox is looking for  <br /> Designer to help the team 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 <span className="bg-[#EB85331A] p-2 rounded-3xl">
-                    <p className="text-[#EB8533] font-semibold">Marketing</p>
-                 </span>
-                 <span className="bg-[#56CDAD1A] p-2 rounded-3xl">
-                    <p className="text-[#4640DE] font-semibold">Business</p>
-                 </span>
-              </div>
-            </div>
-
-
-            {/* //33 */}
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon11.png" width={48} height={48} alt="Cicon11" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-                 Email Marketing
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Pitch</p>
-               <span className="text-[#515B6F]">Berlin, Germany</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Pitch is looking for  <br /> Manager to join marketing 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 <span className="bg-[#EB85331A] p-2 rounded-3xl">
-                    <p className="text-[#EB8533] font-semibold">Marketing</p>
-                 </span>
-                 
-              </div>
-            </div>
-
-
-            {/* //44 */}
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon12.png" width={48} height={48} alt="Cicon12" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-              Visual Designer
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Blinklist</p>
-               <span className="text-[#515B6F]">Granada, Spain</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Blinkist is looking for <br /> Designer to help team desi 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 
-                 <span className="bg-[#56CDAD1A] p-2 rounded-3xl">
-                    <p className="text-[#56CDAD] font-semibold">Design</p>
-                 </span>
-              </div>
-            </div>
-
-          </div>
-          {/* Cards Section second row */}
-          <div className="mt-[48px] flex gap-8">
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon13.png" width={48} height={48} alt="Cicon13" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-              Product Designer
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Revolt</p>
-               <span className="text-[#515B6F]">Madrid, Spain</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Revolut is looking for Email <br /> Marketing to help team ma 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 <span className="bg-[#EB85331A] p-2 rounded-3xl">
-                    <p className="text-[#EB8533] font-semibold">Marketing</p>
-                 </span>
-                 <span className="bg-[#56CDAD1A] p-2 rounded-3xl">
-                    <p className="text-[#56CDAD] font-semibold">Design</p>
-                 </span>
-              </div>
-            </div>
-            {/* //22 */}
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon14.png" width={48} height={48} alt="Cicon14" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-              Lead Designer
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Dropbox</p>
-               <span className="text-[#515B6F]">San, Fransisco</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Dropbox is looking for  <br /> Designer to help the team 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 <span className="bg-[#EB85331A] p-2 rounded-3xl">
-                    <p className="text-[#EB8533] font-semibold">Marketing</p>
-                 </span>
-                 <span className="bg-[#56CDAD1A] p-2 rounded-3xl">
-                    <p className="text-[#4640DE] font-semibold">Business</p>
-                 </span>
-              </div>
-            </div>
-
-
-            {/* //33 */}
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon15.png" width={48} height={48} alt="Cicon15" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-              Brand Strategist
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Pitch</p>
-               <span className="text-[#515B6F]">Berlin, Germany</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Pitch is looking for  <br /> Manager to join marketing 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 <span className="bg-[#EB85331A] p-2 rounded-3xl">
-                    <p className="text-[#EB8533] font-semibold">Marketing</p>
-                 </span>
-                 
-              </div>
-            </div>
-
-
-            {/* //44 */}
-            <div className="w-[280px] h-[314px] p-8 border border-[#D6DDEB]">
-              <div className="flex justify-between">
-                <Image src="/Cicon16.png" width={48} height={48} alt="Cicon16" />
-                <div className="w-[91px] h-[34px] pt-[4px] pb-[4px] pl-[12px] pr-[12px] border border-[#4640DE] flex items-center justify-center">
-                   <p>Full Time</p>
-                </div>
-              </div>
-
-              <div className="w-[184px] h-[57px]">
-              <p className="text-md font-semibold pt-4 text-[#25324B]">
-              Data Analyst
-              </p>
-
-               <div className="flex justify-between">
-               <p className="text-[#515B6F]">Blinklist</p>
-               <span className="text-[#515B6F]">Granada, Spain</span>
-               </div>
-
-              </div>
-
-              <p className="text-xm text-[#7C8493] py-4">
-              Blinkist is looking for <br /> Designer to help team desi 
-              </p>
-
-              <div className="w-[196px] py-6 flex gap-[16px]">
-                 
-                 <span className="bg-[#56CDAD1A] p-2 rounded-3xl">
-                    <p className="text-[#56CDAD] font-semibold">Design</p>
-                 </span>
-              </div>
-            </div>
-
+            <Image src="/arrowIcon.png" width={20} height={20} alt="arrowIcon" />
           </div>
         </div>
+
+        {/* Jobs Grid */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {jobs.map((job, index) => (
+            <div
+              key={index}
+              className="p-6 border rounded-md hover:shadow-lg transition duration-300 bg-white"
+            >
+              {/* Top */}
+              <div className="flex justify-between items-center">
+                <Image src={job.icon} width={48} height={48} alt={job.title} />
+                <span className="border border-[#4640DE] text-sm px-3 py-1">
+                  Full Time
+                </span>
+              </div>
+
+              {/* Title */}
+              <h3 className="font-semibold text-lg mt-4 text-[#25324B]">
+                {job.title}
+              </h3>
+
+              {/* Company + Location */}
+              <div className="flex justify-between text-sm text-[#515B6F] mt-2">
+                <span>{job.company}</span>
+                <span>{job.location}</span>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-[#7C8493] mt-4">
+                {job.desc}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-3 mt-6">
+                {job.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
-    </>
+    </div>
   );
 };
 
