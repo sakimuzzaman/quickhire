@@ -1,5 +1,6 @@
 import CompanySection from "./components/CompanySection";
 import ExploreByCategory from "./components/ExploreByCategory";
+import FeaturedJobs from "./components/FeaturedJobs";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 
@@ -15,10 +16,8 @@ export default function Home() {
 
       <ExploreByCategory />
 
+      <FeaturedJobs />
 
-      {/* <main>
-          <div className="text-3xl text-green-400">Home page</div>
-      </main> */}
       
     </div>
   );
